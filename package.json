@@ -1,0 +1,21 @@
+{
+  "name": "bowlingscorekatainjs",
+  "version": "1.0.0",
+  "description": "Bowling score kata in JS",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Patrick GIRY",
+  "license": "ISC"
+}

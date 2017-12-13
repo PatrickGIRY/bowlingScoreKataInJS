@@ -1,26 +1,30 @@
 # Bowling score kata in JS
 
 <table>
-    <tr><td>1</td><td colspan="2">4</td></tr>
-    <tr><td colspan="3">5</td></tr>
-    <tr><td>4</td><td colspan="2">5</td></tr>
-    <tr><td colspan="3">14</td></tr>
-    <tr><td>6</td><td> colspan="2"/</td></tr>
-    <tr><td colspan="3">29</td></tr>
-    <tr><td>5</td><td colspan="2">/</td></tr>
-    <tr><td colspan="3">49</td></tr>
-    <tr><td>10</td><td colspan="2">X</td></tr>
-    <tr><td colspan="3">60</td></tr>
-    <tr><td>0</td><td colspan="2">1</td></tr>
-    <tr><td colspan="3">61</td></tr>
-    <tr><td>7</td><td colspan="2">/</td></tr>
-    <tr><td colspan="3">77</td></tr>
-    <tr><td>6</td><td colspan="2">/</td></tr>
-    <tr><td colspan="3">97</td></tr>
-    <tr><td>10</td><td colspan="2">X</td></tr>
-    <tr><td colspan="3">117</td></tr>
-    <tr><td>2</td><td>/</td><td>6</td></tr>
-    <tr><td colspan="3">133</td></tr>
+    <tr>
+        <td>1</td><td colspan="2">4</td>
+        <td>4</td><td colspan="2">5</td>
+        <td>6</td><td colspan="2">/</td>
+        <td>5</td><td colspan="2">/</td>
+        <td>10</td><td colspan="2">X</td>
+        <td>0</td><td colspan="2">1</td>
+        <td>7</td><td colspan="2">/</td>
+        <td>6</td><td colspan="2">/</td>
+        <td>10</td><td colspan="2">X</td>
+        <td>2</td><td>/</td><td>6</td>
+    </tr>
+    <tr>
+        <td colspan="3">5</td>
+        <td colspan="3">14</td>
+        <td colspan="3">29</td>
+        <td colspan="3">49</td>
+        <td colspan="3">60</td>
+        <td colspan="3">61</td>
+        <td colspan="3">77</td>
+        <td colspan="3">97</td>
+        <td colspan="3">117</td>
+        <td colspan="3">133</td>
+    </tr>
 </table>
 
 The game consists of 10 frames as shown above. In each frame the player has two opportunities to knock down 10 pins. The score for the frame is the total number of pins knocked down, plus bonuses for strikes and spares.

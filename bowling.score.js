@@ -2,15 +2,15 @@
 
 class Game {
   constructor() {
-    this._score = 0
+    this.rolls = []
   }
 
   roll(pins) {
-    this._score += pins  
+    this.rolls.push(pins)
   }
 
   score() {
-    return this._score
+    return this.rolls.reduce((score, roll) => score + roll, 0)
   }
 }
 

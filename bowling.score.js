@@ -1,12 +1,16 @@
 'use strict'
 
 class Game {
+  constructor() {
+    this._score = 0
+  }
+
   roll(pins) {
-    return undefined
+    this._score += pins  
   }
 
   score() {
-    return 0
+    return this._score
   }
 }
 

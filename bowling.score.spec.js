@@ -9,16 +9,18 @@ describe('Game score', () => {
     })
 
     it('A gutter game has a score of 0', () => {
-        for (let i=0; i<20; i++) {
-            game.roll(0)
-        }
+        rollMany(20, 0)
         expect(game.score()).toEqual(0)
     })
+
+    const rollMany = (n, pins) => {
+        for (let i=0; i<n; i++) {
+            game.roll(pins)
+        }
+    }
     
     it('All rolls with one pin has a score of 20', () => {
-        for (let i=0; i<20; i++) {
-            game.roll(1)
-        }
+        rollMany(20, 1)
         expect(game.score()).toEqual(20)
     })
 })

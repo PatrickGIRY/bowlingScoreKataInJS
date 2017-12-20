@@ -11,19 +11,20 @@ class Game {
 
   score() {
     let score = 0
-    let i = 0
+    let frameIndex = 0
     for (let frame = 0; frame < 10; frame++) {
         let frameScore
-        if (isStrike(this.rolls[i])) {
-           frameScore = 10 + strikeBonus(this.rolls, i)
-           i++
+        let rollScore = this.rolls[frameIndex]
+        if (isStrike(rollScore)) {
+           frameScore = 10 + strikeBonus(this.rolls, frameIndex)
+           frameIndex++
         }
         else {
-           frameScore = this.rolls[i] + this.rolls[i+1]
+           frameScore = rollScore + this.rolls[frameIndex+1]
            if (isSpare(frameScore)) { 
-              score += spareBonus(this.rolls,i)
+              score += spareBonus(this.rolls, frameIndex)
            }
-           i += 2
+           frameIndex += 2
         }
         score += frameScore  
     }

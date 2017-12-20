@@ -35,5 +35,14 @@ describe('Game score', () => {
       game.roll(5)
       game.roll(5)
     }
+    
+    it('One strike has score of 24', () => {
+        game.roll(10)
+        game.roll(3)
+        game.roll(4)
+        rollMany(16, 0)
+        expect(game.score()).toEqual(24)
+    })
+
 })
 

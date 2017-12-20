@@ -13,12 +13,19 @@ class Game {
     let score = 0
     let i = 0
     for (let frame = 0; frame < 10; frame++) {
-      const frameScore = this.rolls[i] + this.rolls[i+1]
-      score += frameScore  
-      if (isSpare(frameScore)) { 
-        score += this.rolls[i+2]
-      }
-      i += 2
+        let frameScore
+        if (this.rolls[i] == 10) {
+           frameScore = this.rolls[i] + this.rolls[i+1] + this.rolls[i+2]
+           i++
+        }
+        else {
+           frameScore = this.rolls[i] + this.rolls[i+1]
+           if (isSpare(frameScore)) { 
+              score += this.rolls[i+2]
+           }
+           i += 2
+        }
+        score += frameScore  
     }
     return score
   }

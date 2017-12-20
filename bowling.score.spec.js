@@ -48,5 +48,11 @@ describe('Game score', () => {
         game.roll(10)
     }
 
+    it('One perfect game has score of 300', () => {
+        rollMany(12, 10)
+        expect(game.score()).toEqual(300)
+    })
+    
+
 })
 

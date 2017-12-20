@@ -21,7 +21,7 @@ class Game {
         else {
            frameScore = this.rolls[i] + this.rolls[i+1]
            if (isSpare(frameScore)) { 
-              score += this.rolls[i+2]
+              score += spareBonus(this.rolls,i)
            }
            i += 2
         }
@@ -36,6 +36,8 @@ const isSpare = frameScore => frameScore == 10
 
 const isStrike = roll => roll == 10
 
-const strikeBonus = (rolls, frameIndex) => rolls[frameIndex+1] + rolls[frameIndex+2] 
+const strikeBonus = (rolls, frameIndex) => rolls[frameIndex+1] + rolls[frameIndex+2]
+
+const spareBonus = (rolls, frameIndex) => rolls[frameIndex+2]
 
 module.exports = Game

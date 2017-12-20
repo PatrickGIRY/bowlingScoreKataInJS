@@ -25,11 +25,15 @@ describe('Game score', () => {
     })
 
     it('One spare has score of 16', () => {
-        game.roll(5)
-        game.roll(5)
+        rollSpare()
         game.roll(3)
         rollMany(17, 0)
         expect(game.score()).toEqual(16)
     })
+
+    const rollSpare = () => {
+      game.roll(5)
+      game.roll(5)
+    }
 })
 

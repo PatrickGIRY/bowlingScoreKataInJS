@@ -15,13 +15,16 @@ class Game {
     for (let frame = 0; frame < 10; frame++) {
       const frameScore = this.rolls[i] + this.rolls[i+1]
       score += frameScore  
-      if (frameScore == 10) { 
+      if (isSpare(frameScore)) { 
         score += this.rolls[i+2]
       }
       i += 2
     }
     return score
   }
+
 }
+
+const isSpare = frameScore => frameScore == 10
 
 module.exports = Game

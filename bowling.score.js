@@ -10,7 +10,17 @@ class Game {
   }
 
   score() {
-    return this.rolls.reduce((score, roll) => score + roll, 0)
+    let score = 0
+    let i = 0
+    for (let frame = 0; frame < 10; frame++) {
+      const frameScore = this.rolls[i] + this.rolls[i+1]
+      score += frameScore  
+      if (frameScore == 10) { 
+        score += this.rolls[i+2]
+      }
+      i += 2
+    }
+    return score
   }
 }
 

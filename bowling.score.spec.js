@@ -23,5 +23,13 @@ describe('Game score', () => {
         rollMany(20, 1)
         expect(game.score()).toEqual(20)
     })
+
+    it('One spare has score of 16', () => {
+        game.roll(5)
+        game.roll(5)
+        game.roll(3)
+        rollMany(17, 0)
+        expect(game.score()).toEqual(16)
+    })
 })
 

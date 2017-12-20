@@ -14,7 +14,7 @@ class Game {
     let i = 0
     for (let frame = 0; frame < 10; frame++) {
         let frameScore
-        if (this.rolls[i] == 10) {
+        if (isStrike(this.rolls[i])) {
            frameScore = this.rolls[i] + this.rolls[i+1] + this.rolls[i+2]
            i++
         }
@@ -33,5 +33,6 @@ class Game {
 }
 
 const isSpare = frameScore => frameScore == 10
+const isStrike = roll => roll == 10
 
 module.exports = Game
